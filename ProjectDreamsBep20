@@ -278,7 +278,7 @@ contract DividendDistributor is IDividendDistributor {
     constructor (address _router) {
         router = _router != address(0)
         ? IDEXRouter(_router)
-        : IDEXRouter(0x10ED43C718714eb63d5aA57B78B54704E256024E);
+        : IDEXRouter(0xD99D1c33F9fC3444f8101754aBC46c52416550D1);
         _token = msg.sender;
     }
 
@@ -410,7 +410,7 @@ contract ProjectDreams is IBEP20, Auth {
 
     string constant _name = "Project Dreams";
     string constant _symbol = "PRO";
-    uint8 constant _decimals = 9;
+    uint8 constant _decimals = 18;
 
     uint256 _totalSupply = 1_000_000_000_000_000 * (10 ** _decimals);
     uint256 public _maxTxAmount = _totalSupply.div(400); // 0.25%
